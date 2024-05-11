@@ -10,6 +10,6 @@ export default class AurhorizedTradePageAssertions {
     }
 
     async checkCountInPositionsTable(count: number): Promise<void> {
-        await expect(this.authorizedTradePage.tradePageTable.positionsTab.tableRow()).toHaveCount(count);
+        await expect(this.authorizedTradePage.tradePageTable.positionsTab.tableRow(), 'Ожидаемое количество ордеров не совпадает с полученным').toHaveCount(count);
     }
 }
