@@ -9,9 +9,9 @@ export default class MarketOrderTab {
     // locators (ограниченное число, не стану сильно параметризировать метод ставки, разумеется, при необходимости нужно описать все локаторы)
     dialogWrapper = () => this.page.getByTestId('trade-dialog'); // в целом, можно не повторять и вынести в абстракцию, но пока не имеет смысла - увеличит количество кода
 
-    dealTypeSellButton = () => this.dialogWrapper().locator('[data-test-id="trade-side-button"]', {hasText: 'Sell'});
+    dealTypeSellButton = () => this.dialogWrapper().locator('[data-test-id="trade-side-button"]', {hasText: 'Продать'});
 
-    dealTypeBuyButton = () => this.dialogWrapper().locator('[data-test-id="trade-side-button"]',  {hasText: 'Buy'});
+    dealTypeBuyButton = () => this.dialogWrapper().locator('[data-test-id="trade-side-button"]',  {hasText: 'Купить'});
 
     selectCurrency = () => this.dialogWrapper().getByTestId('trade-dialog-symbol-select');
 

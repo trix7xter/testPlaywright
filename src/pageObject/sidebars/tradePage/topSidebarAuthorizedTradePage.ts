@@ -10,5 +10,5 @@ export default class TopSidebarAuthorizedTradePage {
     
     sidebarWrapper = () => this.page.locator('[data-test-id="active-chart-toolbar"]');
     // Locators (Также было бы хорошо добавить базовую обертку-локатор для Sidebar, [data-test-id="queue-component"] не уникальная, можно использовать nth, но это крайний случай )
-    newOrderButton = () => this.sidebarWrapper().locator('button', {hasText: 'New Order'});
+    newOrderButton = () => this.sidebarWrapper().locator('button', {hasText: 'Новый ордер'});
 }
