@@ -58,4 +58,10 @@ export default class AuthorizedTradePageSteps {
             await this.authorizedTradePage.tradePageTable.positionsTabButton().click();
         })
     }
+
+    async getCountOrdersInPositionsTable(): Promise<number> {
+        return await test.step("Open positions tab in table", async () => {
+            return await this.authorizedTradePage.tradePageTable.positionsTab.tableRow().count();
+        })
+    }
 }
